@@ -1,0 +1,5 @@
+<span *ngFor="let letter of 'polychromia'.split(''); let i = index"
+      class="letter text-{{colors[i % colors.length]}}">
+        {{letter}}
+</span>
+

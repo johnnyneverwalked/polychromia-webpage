@@ -1,0 +1,16 @@
+
+:host {
+  font-family: Ignotum, Roboto, "Helvetica Neue", sans-serif;
+}
+
+.letter {
+  font-size: 96px;
+  margin-right: -25px;
+}
+
+@media screen and (max-width: 700px) {
+  .letter {
+    font-size: 64px;
+    margin-right: -20px;
+  }
+}

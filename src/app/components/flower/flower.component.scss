@@ -1,0 +1,50 @@
+@import "../../../assets/css/variables";
+
+:host {
+  position: relative;
+  height: 64px;
+}
+
+.rotate {
+  transform: rotate(45deg);
+}
+.petal {
+  fill-opacity: .78;
+  stroke-opacity: 0;
+  animation: spin 10s linear infinite;
+  &.red {fill: $red};
+  &.blue {fill: $blue};
+  &.yellow {fill: $yellow};
+  &.purple {fill: $purple};
+  &.green {fill: $green};
+  &.orange {fill: $orange};
+  &.white {fill: $white};
+  &.black {fill: $black};
+  &.rotate {
+    animation: spin-45 10s linear infinite!important;
+  }
+}
+
+.petal-inner {
+  opacity: .78;
+}
+
+.petal, .petal-inner {
+  position: absolute;
+  height: 64px;
+  width: 64px;
+}
+
+
+@keyframes spin {
+  100% {
+    transform: rotate(90deg);
+  }
+}@keyframes spin-45 {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
