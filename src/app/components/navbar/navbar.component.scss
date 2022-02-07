@@ -1,0 +1,13 @@
+@import "src/assets/css/variables";
+
+:host {
+    .mat-toolbar {
+        background-color: $black;
+        color: $bg;
+    }
+}
+
+.logo {
+    font-family: Ignotum, Roboto, "Helvetica Neue", sans-serif !important;
+    letter-spacing: 3px;
+}

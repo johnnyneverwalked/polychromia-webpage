@@ -7,15 +7,21 @@ $lx3: 40%;
 .red-fill {fill: lighten($red, $lx2)};
 .blue-fill {fill: lighten($blue, $lx2)};
 .yellow-fill {fill: lighten($yellow, $lx1)};
-.purple-fill {fill: lighten($purple, $lx3)};
-.green-fill {fill: lighten($green, $lx3)};
+.purple-fill {fill: lighten($purple, $lx2)};
+.green-fill {fill: lighten($green, $lx2)};
 .orange-fill {fill: lighten($orange, $lx1)};
 .white-fill {fill: $bg};
+.black-fill {fill: $black};
 
 .red-bg {background-color: lighten($red, $lx2)};
 .blue-bg {background-color: lighten($blue, $lx2)};
 .yellow-bg {background-color: lighten($yellow, $lx1)};
-.purple-bg {background-color: lighten($purple, $lx3)};
-.green-bg {background-color: lighten($green, $lx3)};
+.purple-bg {background-color: lighten($purple, $lx2)};
+.green-bg {background-color: lighten($green, $lx2)};
 .orange-bg {background-color: lighten($orange, $lx1)};
 .white-bg {background-color: $bg};
+.black-bg {background-color: $black};
+
+.segment {
+    min-height: 500px;
+}

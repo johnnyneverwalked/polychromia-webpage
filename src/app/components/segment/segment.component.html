@@ -1,5 +1,10 @@
-<div class="{{color}}-bg">
-    <div class="container">
+<div class="{{class}} {{color}}-bg text-center">
+    <div class="container segment d-flex flex-column flex-grow-1 justify-content-center">
+        <h1 class="font-weight-bold font-size-48 m-0" [attr.aria-label]="'segment ' + title">
+            <i class="{{icon}}" *ngIf="icon"></i>
+            {{title}}
+        </h1>
+        <app-flower *ngIf="!hideFlower" [color]="color" class="divider my-5"></app-flower>
         <ng-content></ng-content>
     </div>
     <ng-container [ngSwitch]="seed % 4">

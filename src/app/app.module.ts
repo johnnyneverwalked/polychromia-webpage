@@ -7,18 +7,30 @@ import { LogoComponent } from './components/logo/logo.component';
 import { FlowerComponent } from './components/flower/flower.component';
 import {NgObjectPipesModule} from "ngx-pipes";
 import { SegmentComponent } from './components/segment/segment.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {MatRippleModule} from "@angular/material/core";
+import { GameComponent } from './components/game/game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogoComponent,
     FlowerComponent,
-    SegmentComponent
+    SegmentComponent,
+    NavbarComponent,
+    GameComponent
   ],
     imports: [
         BrowserModule,
         NoopAnimationsModule,
-        NgObjectPipesModule
+        NgObjectPipesModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MatIconModule,
+        MatRippleModule
     ],
   providers: [],
   bootstrap: [AppComponent]

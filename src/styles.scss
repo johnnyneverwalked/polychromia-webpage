@@ -1,104 +1,218 @@
 @import "assets/css/_variables";
 
 @font-face {
-  font-family: Ignotum;
-  src: url(assets/fonts/Ignotum/Ignotum.otf) format("opentype");
+    font-family: Ignotum;
+    src: url(assets/fonts/Ignotum/Ignotum.otf) format("opentype");
 }
+
 @font-face {
-  font-family: Lato;
-  src: url(assets/fonts/Lato/Lato-Regular.ttf);
+    font-family: Lato;
+    src: url(assets/fonts/Lato/Lato-Regular.ttf);
 }
+
 @font-face {
-  font-family: Lato;
-  font-weight: bold;
-  src: url(assets/fonts/Lato/Lato-Bold.ttf);
+    font-family: Lato;
+    font-weight: bold;
+    src: url(assets/fonts/Lato/Lato-Bold.ttf);
 }
 
 html, body {
-  height: 100%;
+    height: 100%;
+    font-family: Lato, "Helvetica Neue", sans-serif !important;
 }
 
 body {
-  margin: 0;
-  font-family: Lato, "Helvetica Neue", sans-serif!important;
-  color: $text!important;
-  min-width: 320px!important;
-  overflow-y: auto;
+    margin: 0;
+    color: $text !important;
+    min-width: 320px !important;
+    overflow-y: auto;
+    line-height: 32px!important;
 }
 
 .bg-main {
-  background-color: $bg;
+    background-color: $bg;
+}
+
+.pointer {
+    cursor: pointer !important;
 }
 
 @for $i from 1 through 100 {
-  .font-size-#{$i} {
-    font-size: #{$i}px;
-    line-height: calc(#{$i}px + 2px);
-  }
+    .font-size-#{$i} {
+        font-size: #{$i}px!important;
+        //line-height: calc(#{$i}px + 2px);
+    }
 }
 
-.text-red {color: $red!important};
-.text-blue {color: $blue!important};
-.text-yellow {color: $yellow!important};
-.text-purple {color: $purple!important};
-.text-green {color: $green!important};
-.text-orange {color: $orange!important};
-.text-white {color: $white!important};
-.text-black {color: $black!important};
+.bg-red {
+    background-color: $red !important
+}
+
+;
+.bg-blue {
+    background-color: $blue !important
+}
+
+;
+.bg-yellow {
+    background-color: $yellow !important
+}
+
+;
+.bg-purple {
+    background-color: $purple !important
+}
+
+;
+.bg-green {
+    background-color: $green !important
+}
+
+;
+.bg-orange {
+    background-color: $orange !important
+}
+
+;
+.bg-white {
+    background-color: $white !important
+}
+
+;
+.bg-black {
+    background-color: $black !important
+}
+
+;
+
+.text-red {
+    color: $red !important
+}
+
+;
+.text-blue {
+    color: $blue !important
+}
+
+;
+.text-yellow {
+    color: $yellow !important
+}
+
+;
+.text-purple {
+    color: $purple !important
+}
+
+;
+.text-green {
+    color: $green !important
+}
+
+;
+.text-orange {
+    color: $orange !important
+}
+
+;
+.text-white {
+    color: $white !important
+}
+
+;
+.text-black {
+    color: $black !important
+}
+
+;
+.text-primary {
+    color: $text !important
+}
+
+;
+.text-secondary {
+    color: $bg !important
+}
+
+;
+
+.text-glow {
+    text-shadow: 0 0 12px rgba(85, 94, 125, 0.41);
+}
+
+.text-glow-dark {
+    text-shadow: 0 0 12px rgba(249, 249, 249, 0.41);
+}
+
+a:link {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+a:visited {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+    color: inherit !important;
+}
 
 .divider {
-  text-shadow: 0 0 12px rgba(85, 94, 125, 0.41);
+    text-shadow: 0 0 12px rgba(85, 94, 125, 0.41);
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 100%;
-  }
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 100%;
+    }
 
-  &::before {
-    background: linear-gradient(to right, rgba(240,240,240,0), $white);
-    margin-right: 8vh;
-  }
+    &::before {
+        background: linear-gradient(to right, rgba(240, 240, 240, 0), $text);
+        margin-right: 8vh;
+    }
 
-  &::after {
-    background: linear-gradient(to left, rgba(240,240,240,0), $white);
-    margin-left: 4vh;
-  }
+    &::after {
+        background: linear-gradient(to left, rgba(240, 240, 240, 0), $text);
+        margin-left: 4vh;
+    }
 
 }
 
 .text-entrance {
-  -webkit-animation: text-entrance 1s both;
-  animation: text-entrance 1s both;
+    -webkit-animation: text-entrance 1s both;
+    animation: text-entrance 1s both;
 }
 
 @-webkit-keyframes text-entrance {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 @keyframes text-entrance {
-  0% {
-    letter-spacing: -0.5em;
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
 }

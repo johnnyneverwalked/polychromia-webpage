@@ -1,22 +1,72 @@
-<div class="mt-5 pt-5 bg-main">
-    <app-segment class="mt-5" nextColor="purple" class="text-center">
+<app-navbar></app-navbar>
+<div class="pt-5 bg-main">
+    <app-segment class="mt-5" [hideFlower]="true" [seed]="1" [nextColor]="colors.PURPLE">
         <app-logo class="text-entrance"></app-logo>
+        <app-flower [color]="colors.BLUE" class="divider my-5"></app-flower>
+        <h1 class="font-weight-bold font-size-36 text-glow">
+            <i class="la la-paint-brush"></i>
+            A relaxing color-blending puzzle experience.
+        </h1>
     </app-segment>
 
-    <app-segment [color]="color"
-                 [nextColor]="(colors|values)[(i + 1) % (colors|values).length]"
-                 *ngFor="let color of colors|values; let i = index">
-        <app-flower [color]="color" class="divider  mb-5"></app-flower>
-        <p class="font-size-20 m-0">
-            <b>Lorem</b> Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
-            an
-            unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not
-            only
-            five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was
-            popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-            recently
-            with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    <app-segment [color]="colors.PURPLE" icon="la la-play-circle" title="Watch the trailer" [nextColor]="colors.BLUE">
+    </app-segment>
+
+    <app-segment [color]="colors.BLUE" icon="la la-coffee" title="Blah blah">
+
+    </app-segment>
+
+    <app-segment title="TRY IT!" [nextColor]="colors.GREEN">
+        <p class="font-size-24 m-0">
+            <i class="la la-paint-brush"></i>
+            Draw lines starting from the colored circles and cover the whole board!
+            <br>
+            <i class="las la-palette"></i>
+            Try to fill the end points with their matching color by blending colors together and creating new ones!
+        </p>
+        <app-game></app-game>
+    </app-segment>
+
+    <app-segment [color]="colors.GREEN" [nextColor]="colors.YELLOW" icon="la la-palette" title="Different palettes">
+
+    </app-segment>
+
+    <app-segment [color]="colors.YELLOW" [nextColor]="colors.ORANGE" icon="la la-paint-brush" title="Minimal aesthetic">
+
+    </app-segment>
+
+    <app-segment [color]="colors.ORANGE" [nextColor]="colors.RED" icon="la la-headphones" title="Chill soundtrack">
+
+    </app-segment>
+
+
+    <app-segment [color]="colors.RED" icon="la la-universal-access" title="Accessibility" [nextColor]="colors.PURPLE">
+        <p class="font-size-24 m-0">
+            POLYCHROMIA includes many different options such as adjustable visual effects and colorblindness support in order
+            to make the experience as accessible as possible for everyone.
         </p>
     </app-segment>
+
+    <app-segment [color]="colors.PURPLE" icon="la la-mail-bulk" title="Newsletter" nextColor="black" [seed]="1">
+        <p class="font-size-24 m-0">
+            Subscribe to the newsletter to get updates about the game and also join the <b>closed BETA</b> when it becomes available.
+            You can expect 1-2 emails per month with development updates and maybe some trivia about how the concept for <b>POLYCHROMIA</b> came to be.
+            <br>
+            <small>I will not spam you, I promise! <i class="la la-heart"></i></small>
+        </p>
+    </app-segment>
+
+    <footer class="px-5 pb-5 text-white text-glow-dark font-size-16 bg-black">
+
+        <div class="row w-100">
+            <div class="col text-right">
+                <p><a href="https://johnnyneverwalked.itch.io/" target="_blank">
+                    Johnnyneverwalked <i class="fa fa-times"></i>
+                </a></p>
+                <p><a href="https://twitter.com/CursedTomo" target="_blank">@CursedTomo</a></p>
+                <p>Steam</p>
+                <p>Itch.io</p>
+            </div>
+        </div>
+    </footer>
 </div>
