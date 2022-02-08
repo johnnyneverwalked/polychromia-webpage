@@ -1,12 +1,30 @@
+@import "src/assets/css/variables";
+
 
 :host {
     font-family: Ignotum, Roboto, "Helvetica Neue", sans-serif;
     margin-right: 40px;
+    position: relative;
 }
 
 .letter {
     font-size: 128px;
     margin-right: -40px;
+    z-index: 1;
+}
+
+.bg-image {
+    height: 224px;
+    width: 224px;
+    position: absolute;
+    z-index: -1;
+    background-image: url("../../../assets/images/bg-logo.png");
+    background-size: contain;
+    background-color: $bg;
+    top: -120%;
+    left: 50%;
+    opacity: .25;
+    transform: translateX(calc(-50% + 20px));
 }
 
 @media screen and (max-width: 800px) {
@@ -16,5 +34,12 @@
     .letter {
         font-size: 64px;
         margin-right: -20px;
+    }
+
+    .bg-image {
+        height: 112px;
+        width: 112px;
+        top: -80%;
+        transform: translateX(calc(-50% + 10px));
     }
 }

@@ -28,7 +28,16 @@
     </app-segment>
 
     <app-segment [color]="colors.GREEN" [nextColor]="colors.YELLOW" title="Different palettes">
-
+        <p class="font-size-24 m-0">
+            Polychromia offers a variety of color palettes to match your unique aesthetic.
+            Switch up the game's visuals to create the coziest experience tailored to you.
+        </p>
+        <p class="mt-4">
+            <video class="mat-elevation-z4 border-radius video"
+                   src="assets/videos/2022-02-08_18-47-47.mp4"
+                   [autoplay]="true" [loop]="true" [muted]="true" type="video/mp4">
+            </video>
+        </p>
     </app-segment>
 
     <app-segment [color]="colors.YELLOW" [nextColor]="colors.ORANGE" title="Minimal aesthetic">
@@ -37,35 +46,61 @@
 
     <app-segment [color]="colors.ORANGE" [nextColor]="colors.RED" title="Chill soundtrack">
 
-    </app-segment>
-
-
-    <app-segment [color]="colors.RED" title="Accessibility" [nextColor]="colors.PURPLE">
-        <p class="font-size-24 m-0">
-            POLYCHROMIA includes many different options such as adjustable visual effects and colorblindness support in order
-            to make the experience as accessible as possible for everyone.
+        <p class="font-size-24">
+            Polychromia features a chill, lo-fi soundtrack to help you relax and enter a flow-like state while
+            playing it. Just empty your thoughts and solve puzzles to the music. <i class="la la-music"></i>
+        </p>
+        <p class="mt-4 font-size-14">
+            <img alt="cassette" src="assets/images/cassette.png" [ngStyle]="{maxHeight: '256px', maxWidth: '256px'}">
         </p>
     </app-segment>
 
-    <app-segment [color]="colors.PURPLE" title="Newsletter" nextColor="black" [seed]="1">
-        <p class="font-size-24 m-0">
-            Subscribe to the newsletter to get updates about the game and also join the <b>closed BETA</b> when it becomes available.
-            You can expect 1-2 emails per month with development updates and maybe some trivia about how the concept for <b>POLYCHROMIA</b> came to be.
+    <app-segment [color]="colors.RED" title="Accessibility" [nextColor]="colors.PURPLE">
+        <p class="font-size-24">
+            Polychromia includes many different options such as <b>adjustable</b> visual effects and
+            <b>colorblindness</b> support in order
+            to make the experience as accessible as possible for everyone.
+        </p>
+        <p class="mt-4">
+            <img alt="colorblind-symbols" src="assets/images/cbgif.gif"
+                 [ngStyle]="{maxHeight: '128px', maxWidth: '192px'}">
+        </p>
+    </app-segment>
+
+    <app-segment [color]="colors.PURPLE" title="Get in touch" nextColor="black" [seed]="1">
+        <p class="font-size-24">
+            Subscribe to my newsletter to get updates about the game and also join the <b>closed BETA</b> once it
+            becomes available.
+            You can expect at most 1-2 emails per month with development updates and maybe some trivia about how the
+            concept for <b>POLYCHROMIA</b> came to be.
             <br>
             <small>I will not spam you, I promise! <i class="la la-heart"></i></small>
         </p>
+        <div class="text-center row mt-3">
+            <div class="col-md-4 offset-md-4 col-12">
+                <button class="custom-btn text-white">
+                    <mat-icon class="mat-2x mt-2 mx-5 text-glow-dark">email</mat-icon>
+                </button>
+            </div>
+        </div>
     </app-segment>
 
-    <footer class="px-5 pb-5 text-white text-glow-dark font-size-16 bg-black">
+    <footer class="px-5 pb-5 text-white text-glow-dark font-size-18 bg-black">
 
         <div class="row w-100">
+            <div class="col align-self-end">
+                <small class="font-italic">Cassette art by vectorpocket</small>
+            </div>
             <div class="col text-right">
                 <p><a href="https://johnnyneverwalked.itch.io/" target="_blank">
-                    Johnnyneverwalked <i class="fa fa-times"></i>
+                    Johnnyneverwalked <i class="lab la-itch-io"></i>
                 </a></p>
-                <p><a href="https://twitter.com/CursedTomo" target="_blank">@CursedTomo</a></p>
-                <p>Steam</p>
-                <p>Itch.io</p>
+                <p><a href="https://twitter.com/CursedTomo" target="_blank">
+                    @CursedTomo <i class="lab la-twitter"></i>
+                </a></p>
+                <p><a>
+                    Steam <i class="lab la-steam"></i>
+                </a></p>
             </div>
         </div>
     </footer>
