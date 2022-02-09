@@ -60,6 +60,14 @@ h1 {
     }
 }
 
+.title {
+    font-weight: bold!important;
+    background: linear-gradient(to right, $text, $black);
+    padding-bottom: 1rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .bg-red {
     background-color: $red !important
 }

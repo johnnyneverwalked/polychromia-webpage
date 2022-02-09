@@ -12,8 +12,44 @@
     <app-segment [color]="colors.PURPLE" title="Watch the trailer" [nextColor]="colors.BLUE">
     </app-segment>
 
-    <app-segment [color]="colors.BLUE" title="Blah blah">
+    <app-segment [color]="colors.BLUE" title="A fresh take on logic puzzles">
+        <p class="font-size-24 m-0 mb-5">
+            Polychromia combines numberlink puzzles with color theory to create a unique mind-bending experience. <br>
+            Solve by blending colors together in order to paint every square and fill every endpoint <br>
 
+            <video class="mat-elevation-z4 my-4 border-radius video"
+                   src="assets/videos/compressed/first.mp4"
+                   [autoplay]="true" [loop]="true" [muted]="true" type="video/mp4">
+            </video> <br>
+
+            Tranquil sounds and serene visuals will help you enter your flow state and lose yourself into the colors.
+        </p>
+        <div class="row mt-5">
+            <div class="col-12 col-lg mt-5 mb-3">
+                <h1 class="font-size-36 title">Paint</h1>
+                <video class="mat-elevation-z4 border-radius video w-100"
+                       src="assets/videos/compressed/paint.mp4"
+                       [autoplay]="true" [loop]="true" [muted]="true" type="video/mp4">
+                </video>
+                <p class="font-size-18">Paint the whole board with colors! Don't leave any squares empty.</p>
+            </div>
+            <div class="col-12 col-lg mb-3 mt-5">
+                <h1 class="font-size-36 title">Blend</h1>
+                <video class="mat-elevation-z4 border-radius video w-100"
+                       src="assets/videos/compressed/blend.mp4"
+                       [autoplay]="true" [loop]="true" [muted]="true" type="video/mp4">
+                </video>
+                <p class="font-size-18">Mix colors together to create new ones by overlapping lines.</p>
+            </div>
+            <div class="col-12 col-lg mb-3 mt-5">
+                <h1 class="font-size-36 title">Bloom!</h1>
+                <video class="mat-elevation-z4 border-radius video w-100"
+                       src="assets/videos/compressed/bloom.mp4"
+                       [autoplay]="true" [loop]="true" [muted]="true" type="video/mp4">
+                </video>
+                <p class="font-size-18">Fill the hollow circles with the correct colors and make the flowers inside bloom!</p>
+            </div>
+        </div>
     </app-segment>
 
     <app-segment title="TRY IT!" [nextColor]="colors.GREEN">
@@ -22,26 +58,36 @@
             Draw lines starting from the colored circles and cover the whole board!
             <br>
             <i class="las la-palette"></i>
-            Try to fill the end points with their matching color by blending colors together and creating new ones!
+            Try to fill the hollow circles with their matching color by blending colors together!
         </p>
         <app-game></app-game>
     </app-segment>
 
-    <app-segment [color]="colors.GREEN" [nextColor]="colors.YELLOW" title="Different palettes">
+    <app-segment [color]="colors.GREEN" [nextColor]="colors.YELLOW" title="Minimal aesthetic">
+        <p class="font-size-24 m-0">
+            <b>Polychromia is a colorful zen garden.</b> <br> With its minimal aesthetic, clever use of white space and calming
+            sound design, it aims to invoke
+            feelings of peace and tranquility.
+        </p>
+        <p class="mt-4">
+            <video class="mat-elevation-z4 border-radius video"
+                   src="assets/videos/compressed/minimal.mp4"
+                   [autoplay]="true" [loop]="true" [muted]="true" type="video/mp4">
+            </video>
+        </p>
+    </app-segment>
+
+    <app-segment [color]="colors.YELLOW" [nextColor]="colors.ORANGE" title="Different palettes">
         <p class="font-size-24 m-0">
             Polychromia offers a variety of color palettes to match your unique aesthetic.
             Switch up the game's visuals to create the coziest experience tailored to you.
         </p>
         <p class="mt-4">
             <video class="mat-elevation-z4 border-radius video"
-                   src="assets/videos/2022-02-08_18-47-47.mp4"
+                   src="../assets/videos/compressed/palettes.mp4"
                    [autoplay]="true" [loop]="true" [muted]="true" type="video/mp4">
             </video>
         </p>
-    </app-segment>
-
-    <app-segment [color]="colors.YELLOW" [nextColor]="colors.ORANGE" title="Minimal aesthetic">
-
     </app-segment>
 
     <app-segment [color]="colors.ORANGE" [nextColor]="colors.RED" title="Chill soundtrack">
@@ -78,9 +124,11 @@
         </p>
         <div class="text-center row mt-3">
             <div class="col-md-4 offset-md-4 col-12">
-                <button class="custom-btn text-white">
-                    <mat-icon class="mat-2x mt-2 mx-5 text-glow-dark">email</mat-icon>
-                </button>
+                <a href="https://mailchi.mp/efeb01eebccd/polychromia" target="_blank">
+                    <button class="custom-btn text-white">
+                        <mat-icon class="mat-2x mt-2 mx-5 text-glow-dark">email</mat-icon>
+                    </button>
+                </a>
             </div>
         </div>
     </app-segment>
