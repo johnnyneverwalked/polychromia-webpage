@@ -229,6 +229,7 @@ button {
     font-size: inherit;
     font-family: inherit;
     &.custom-btn {
+        box-sizing: border-box;
         font-weight: 600;
         color: $text;
         text-transform: uppercase;
@@ -239,6 +240,7 @@ button {
         transform-style: preserve-3d;
         transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
         &::before {
+            box-sizing: border-box;
             position: absolute;
             content: '';
             width: 100%;
@@ -254,7 +256,7 @@ button {
             transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
         }
         &:hover {
-            background: lighten($black, 20%);
+            background: lighten($black, 30%);
             transform: translate(0, 0.25em);
             &::before {
                 box-shadow: 0 0 0 2px $black, 0 0.5em 0 0 lighten($black, 30%);
@@ -262,11 +264,96 @@ button {
             }
         }
         &:active {
-            background: lighten($black, 20%);;
+            box-sizing: border-box;
+            background: lighten($black, 30%);
             transform: translate(0em, 0.75em);
             &::before {
                 box-shadow: 0 0 0 2px $black, 0 0 lighten($black, 30%);
                 transform: translate3d(0, 0, -1em);
+            }
+        }
+    }
+    &.steam {
+        color: white;
+        background: lighten(#171a21, 20%);
+        border: 2px solid #171a21;
+        &::before {
+            background: lighten(#171a21, 10%);
+            box-shadow: 0 0 0 2px #171a21, 0 0.625em 0 0 lighten(#171a21, 30%);
+        }
+        &:hover {
+            background: lighten(#171a21, 30%);
+            &::before {
+                box-shadow: 0 0 0 2px #171a21, 0 0.5em lighten(#171a21, 30%);
+            }
+        }
+        &:active {
+            background: lighten(#171a21, 30%);
+            &::before {
+                box-shadow: 0 0 0 2px #171a21, 0 0 lighten(#171a21, 30%);
+            }
+        }
+    }
+    &.itch-io {
+        color: white;
+        background: lighten(#ff2e51, 15%);
+        border: 2px solid #ff2e51;
+        &::before {
+            background: lighten(#ff2e51, 10%);
+            box-shadow: 0 0 0 2px #ff2e51, 0 0.625em 0 0 lighten(#ff2e51, 20%);
+        }
+        &:hover {
+            background: lighten(#ff2e51, 20%);
+            &::before {
+                box-shadow: 0 0 0 2px #ff2e51, 0 0.5em lighten(#ff2e51, 20%);
+            }
+        }
+        &:active {
+            background: lighten(#ff2e51, 20%);
+            &::before {
+                box-shadow: 0 0 0 2px #ff2e51, 0 0 lighten(#ff2e51, 20%);
+            }
+        }
+    }
+    &.google-play {
+        color: white;
+        background: lighten(#50792b, 20%);
+        border: 2px solid #50792b;
+        &::before {
+            background: lighten(#50792b, 10%);
+            box-shadow: 0 0 0 2px #50792b, 0 0.625em 0 0 lighten(#689f38, 30%);
+        }
+        &:hover {
+            background: lighten(#50792b, 30%);
+            &::before {
+                box-shadow: 0 0 0 2px #50792b, 0 0.5em lighten(#50792b, 30%);
+            }
+        }
+        &:active {
+            background: lighten(#50792b, 30%);
+            &::before {
+                box-shadow: 0 0 0 2px #50792b, 0 0 lighten(#50792b, 30%);
+            }
+        }
+    }
+    &.nintendo-switch {
+        color: white;
+        background: lighten(#ee1c25, 15%);
+        border: 2px solid #ee1c25;
+        &::before {
+            background: lighten(#ee1c25, 10%);
+            box-shadow: 0 0 0 2px #ee1c25, 0 0.625em 0 0 lighten(#ee1c25, 20%);
+        }
+        &:hover {
+            background: lighten(#ee1c25, 20%);
+            &::before {
+                box-shadow: 0 0 0 2px #ee1c25, 0 0.5em lighten(#ee1c25, 20%);
+            }
+        }
+        &:active {
+            background: lighten(#ee1c25, 20%);
+            &::before {
+                box-shadow: 0 0 0 2px #ee1c25, 0 0 lighten(#ee1c25, 20%);
             }
         }
     }
