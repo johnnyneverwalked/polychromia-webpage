@@ -13,6 +13,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import {MatRippleModule} from "@angular/material/core";
 import { GameComponent } from './components/game/game.component';
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { GameComponent } from './components/game/game.component';
         MatToolbarModule,
         MatButtonModule,
         MatIconModule,
-        MatRippleModule
+        MatRippleModule,
+        MatMenuModule
     ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,7 +13,7 @@ $base-dimension: 64px;
 .petal {
   fill-opacity: .78;
   stroke-opacity: 0;
-  animation: spin 10s linear infinite;
+  animation: spin 8s linear infinite;
   &.red {fill: $red};
   &.blue {fill: $blue};
   &.yellow {fill: $yellow};
@@ -23,7 +23,7 @@ $base-dimension: 64px;
   &.white {fill: $white};
   &.black {fill: $black};
   &.rotate {
-    animation: spin-45 10s linear infinite!important;
+    animation: spin-45 8s linear infinite!important;
   }
 }
 
