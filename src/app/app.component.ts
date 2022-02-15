@@ -8,12 +8,16 @@ import {Colors} from "./interfaces/Generics";
 })
 export class AppComponent implements AfterViewInit {
     readonly colors = Colors
+    loaded: boolean = false;
     title = 'polychromia-webpage';
 
     constructor(private cd: ChangeDetectorRef) {
     }
 
     ngAfterViewInit() {
-        this.cd.detectChanges()
+        setTimeout(() => {
+            this.loaded = true;
+            this.cd.detectChanges()
+        })
     }
 }
