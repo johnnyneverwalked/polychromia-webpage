@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component} from '@angular/core';
 import {Colors} from "./interfaces/Generics";
 
 @Component({
@@ -6,7 +6,14 @@ import {Colors} from "./interfaces/Generics";
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
     readonly colors = Colors
     title = 'polychromia-webpage';
+
+    constructor(private cd: ChangeDetectorRef) {
+    }
+
+    ngAfterViewInit() {
+        this.cd.detectChanges()
+    }
 }
