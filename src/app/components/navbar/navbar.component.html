@@ -15,7 +15,7 @@
             </button>
         </a>
 
-        <ng-container *ngIf="showMenu" >
+        <ng-container *ngIf="showMenu && buttons.length" >
             <button mat-icon-button class="text-glow-dark" [mat-menu-trigger-for]="dropdown">
                 <mat-icon>list</mat-icon>
             </button>
