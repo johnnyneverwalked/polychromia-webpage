@@ -5,7 +5,7 @@
     <div class="d-inline-block text-glow-dark float-right">
         <ng-container *ngIf="!showMenu">
             <a href="{{btn.href}}" *ngFor="let btn of buttons" target="_blank">
-                <button mat-button class="text-glow-dark">{{btn.title}}</button>
+                <button mat-icon-button class="text-glow-dark mx-2"><i class="{{btn.icon}} la-2x"></i></button>
             </a>
         </ng-container>
 

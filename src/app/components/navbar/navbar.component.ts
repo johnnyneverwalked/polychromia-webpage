@@ -7,9 +7,9 @@ import {AfterViewInit, ChangeDetectorRef, Component, HostListener} from '@angula
 })
 export class NavbarComponent implements AfterViewInit {
     public readonly buttons = [
-        {title: "GOOGLE PLAY", href: ""},
-        {title: "STEAM", href: ""},
-        {title: "ITCH.IO", href: ""},
+        // {title: "GOOGLE PLAY", href: "", icon: "lab la-google-play"},
+        {title: "STEAM", href: "https://store.steampowered.com/app/1909080/Polychromia", icon: "lab la-steam"},
+        // {title: "ITCH.IO", href: "", icon: "lab la-itch-io"},
     ]
 
     public showMenu: boolean = false;
@@ -28,7 +28,7 @@ export class NavbarComponent implements AfterViewInit {
     }
 
     canShowMenu() {
-        this.showMenu = document.body.offsetWidth < 600;
+        this.showMenu = document.body.offsetWidth < 350;
         this.cd.markForCheck();
     }
 

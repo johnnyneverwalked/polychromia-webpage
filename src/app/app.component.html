@@ -9,20 +9,23 @@
         </h1>
 
         <div class="row justify-content-center mt-5">
-            <div class="col pt-lg-3 pt-5" [ngStyle]="{maxWidth: '250px'}">
-                <a href="https://play.google.com/store/apps" target="_blank">
-                    <button class="custom-btn w-100 google-play text-glow-dark my-3">
-                        Google play
+            <div class="col pt-5">
+                <a href="https://play.google.com/store/apps" *ngIf="false" target="_blank">
+                    <button class="custom-btn google-play text-glow-dark m-3">
+                        <!--                        Google play-->
+                        <i class="la-3x lab la-google-play"></i>
                     </button>
                 </a>
-                <a href="https://store.steampowered.com" target="_blank">
-                    <button class="custom-btn steam w-100 text-glow-dark my-3">
-                        STEAM
+                <a href="https://store.steampowered.com/app/1909080/Polychromia/" target="_blank">
+                    <button class="custom-btn steam text-glow-dark m-3">
+                        <!--                        STEAM-->
+                        <i class="la-3x lab la-steam"></i>
                     </button>
                 </a>
-                <a href="https://johnnyneverwalked.itch.io/polychromia" target="_blank">
-                    <button class="custom-btn itch-io w-100 text-glow-dark my-3">
-                        Itch.io
+                <a href="https://johnnyneverwalked.itch.io/polychromia" *ngIf="false" target="_blank">
+                    <button class="custom-btn itch-io text-glow-dark m-3">
+                        <!--                        Itch.io-->
+                        <i class="la-3x lab la-itch-io"></i>
                     </button>
                 </a>
             </div>
@@ -30,6 +33,17 @@
     </app-segment>
 
     <app-segment [color]="colors.PURPLE" title="Watch the trailer" [nextColor]="colors.BLUE">
+        <div class="row">
+            <div class="col" #trailerContainer [ngStyle]="{height: .56 * trailerContainer.offsetWidth + 'px'}">
+                <embed width="100%" height="100%"
+                       src="https://www.youtube.com/embed/Vm3CIan_RS0"
+                       wmode="transparent"
+                       type="video/mp4"
+                       allow="autoplay; encrypted-media; picture-in-picture"
+                       allowfullscreen
+                       title="Polychromia reveal trailer">
+            </div>
+        </div>
     </app-segment>
 
     <app-segment [color]="colors.BLUE" title="A fresh take on logic puzzles" [nextColor]="colors.GREEN">
@@ -74,17 +88,16 @@
         </div>
     </app-segment>
 
-<!--    <app-segment title="TRY IT!" [nextColor]="colors.GREEN">-->
-<!--        <p class="font-size-24 m-0">-->
-<!--            <i class="la la-paint-brush"></i>-->
-<!--            Draw lines starting from the colored circles and cover the whole board!-->
-<!--            <br>-->
-<!--            <i class="las la-palette"></i>-->
-<!--            Try to fill the hollow circles with their matching color by blending colors together!-->
-<!--        </p>-->
-<!--        <app-game class="mt-5"></app-game>-->
-<!--    </app-segment>-->
-
+    <!--    <app-segment title="TRY IT!" [nextColor]="colors.GREEN">-->
+    <!--        <p class="font-size-24 m-0">-->
+    <!--            <i class="la la-paint-brush"></i>-->
+    <!--            Draw lines starting from the colored circles and cover the whole board!-->
+    <!--            <br>-->
+    <!--            <i class="las la-palette"></i>-->
+    <!--            Try to fill the hollow circles with their matching color by blending colors together!-->
+    <!--        </p>-->
+    <!--        <app-game class="mt-5"></app-game>-->
+    <!--    </app-segment>-->
 
 
     <app-segment [color]="colors.GREEN" [nextColor]="colors.YELLOW" title="Different palettes">
@@ -118,8 +131,9 @@
     <app-segment [color]="colors.ORANGE" [nextColor]="colors.RED" title="Chill soundtrack">
 
         <p class="font-size-24">
-            Polychromia features a chill, lo-fi soundtrack to help you relax and enter a flow-like state while
-            playing it. Just empty your thoughts and solve puzzles to the music. <i class="la la-music"></i>
+            Polychromia's soundtrack features piano improvisations along with chill, lo-fi tracks to help you relax and
+            enter a flow-like state while playing it. Just empty your thoughts and solve puzzles to the music. <i
+            class="la la-music"></i>
         </p>
         <p class="mt-4 font-size-14">
             <img alt="cassette" src="assets/images/cassette.png" [ngStyle]="{maxHeight: '256px', maxWidth: '256px'}">
@@ -160,7 +174,7 @@
 
     <footer class="px-3 px-md-5 pb-5 text-white text-glow-dark font-size-18 bg-black">
 
-        <div class="row pt-5 text-center pt-md-0 w-100">
+        <div class="row pt-5 pt-md-0 w-100">
 
             <div class="col-12 text-right">
                 <p><a href="https://johnnyneverwalked.itch.io/" target="_blank">
@@ -169,8 +183,8 @@
                 <p><a href="https://twitter.com/CursedTomo" target="_blank">
                     @CursedTomo <i class="lab la-twitter"></i>
                 </a></p>
-                <p><a>
-                    Steam
+                <p><a href="https://store.steampowered.com/app/1909080/Polychromia/" target="_blank">
+                    Steam <i class="lab la-steam"></i>
                 </a></p>
             </div>
             <div class="col-12 mt-5 align-self-end">
