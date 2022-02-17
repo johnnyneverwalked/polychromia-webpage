@@ -8,7 +8,7 @@ import {AfterViewInit, ChangeDetectorRef, Component, HostListener} from '@angula
 export class NavbarComponent implements AfterViewInit {
     public readonly buttons: any[] = [
         // {title: "GOOGLE PLAY", href: "", icon: "lab la-google-play"},
-        // {title: "STEAM", href: "https://store.steampowered.com/app/1909080/Polychromia", icon: "lab la-steam"},
+        {title: "STEAM", href: "https://store.steampowered.com/app/1909080/Polychromia", icon: "lab la-steam"},
         // {title: "ITCH.IO", href: "", icon: "lab la-itch-io"},
     ]
 
