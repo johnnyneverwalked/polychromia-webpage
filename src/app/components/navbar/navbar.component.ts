@@ -9,7 +9,7 @@ export class NavbarComponent implements AfterViewInit {
     public readonly buttons: any[] = [
         // {title: "GOOGLE PLAY", href: "", icon: "lab la-google-play"},
         {title: "STEAM", href: "https://store.steampowered.com/app/1909080/Polychromia", icon: "lab la-steam"},
-        // {title: "ITCH.IO", href: "", icon: "lab la-itch-io"},
+        {title: "ITCH.IO", href: "https://johnnyneverwalked.itch.io/polychromia", icon: "lab la-itch-io"},
     ]
 
     public showMenu: boolean = false;
