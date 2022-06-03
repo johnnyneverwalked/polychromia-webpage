@@ -296,10 +296,10 @@ button {
     }
     &.itch-io {
         color: white;
-        background: lighten(#ff2e51, 15%);
+        background: lighten(#ff2e51, 10%);
         border: 2px solid #ff2e51;
         &::before {
-            background: lighten(#ff2e51, 10%);
+            background: lighten(#ff2e51, 5%);
             box-shadow: 0 0 0 2px #ff2e51, 0 0.625em 0 0 lighten(#ff2e51, 20%);
         }
         &:hover {
